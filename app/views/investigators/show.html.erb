@@ -1,0 +1,21 @@
+<p>
+  <strong>Name:</strong>
+  <%= @investigator.first_name + ' ' + @investigator.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @investigator.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @investigator.phone %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @investigator.comments %>
+</p>
+
+<%= link_to "Back to investigators", investigators_path %>

@@ -1,0 +1,34 @@
+<h1>Investigators</h1>
+
+<p>Here is where the ward mission leader, ward missionaries, and ward
+council can get an overview of priority investigators.</p>
+
+<%= form_for :investigator, url: investigators_path do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+  
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </p>
+  
+  <p>
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

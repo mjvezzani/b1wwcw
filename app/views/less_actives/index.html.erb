@@ -1,0 +1,23 @@
+<h1>Boston 1st Ward :: Less Actives</h1>
+
+<%= link_to "Add New Less Active", new_less_active_path %>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+  </tr>
+  
+  <% @less_actives.each do |la| %>
+  
+  <tr>
+    <td><%= link_to "#{la.first_name} #{la.last_name}", la %></td>
+    <td><%= la.address %></td>
+    <td><%= la.phone %></td>
+  </tr>
+  
+  <% end %>
+</table>
+
+<hr>

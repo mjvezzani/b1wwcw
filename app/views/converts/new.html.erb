@@ -1,0 +1,56 @@
+<h1>Converts</h1>
+
+<p>Here is where the ward mission leader, ward missionaries, and ward
+council can get an overview of priority converts.</p>
+
+<%= form_for :convert, url: converts_path do |f| %>
+<div class="row">
+  <div class="span6">
+    <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </p>
+    
+    <p>
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </p>
+    
+    <p>
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </p>
+    
+    <p>
+      <%= f.label :calling %><br>
+      <%= f.text_field :calling %>
+    </p>  
+  </div>
+  
+  <div class="span6">
+    <p>
+    <%= f.label :ordained %><br>
+    <%= f.text_field :ordained %>
+    </p>
+    
+    <p>
+      <%= f.label :endowed %><br>
+      <%= f.text_field :endowed %>
+    </p>
+    
+    <p>
+      <%= f.label :comments %><br>
+      <%= f.text_area :comments %>
+    </p>
+    
+    <p>
+      <%= f.submit %>
+      <div class="btn"><%= link_to "Back to Converts", converts_path %></div>
+    </p>
+    <% end %>
+  </div>
+</div>

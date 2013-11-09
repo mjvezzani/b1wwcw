@@ -1,0 +1,23 @@
+<h1>Boston 1st Ward :: Converts</h1>
+
+<%= link_to "Add New Convert", new_convert_path %>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+  </tr>
+  
+  <% @converts.each do |c| %>
+  
+  <tr>
+    <td><%= link_to "#{c.first_name} #{c.last_name}", c %></td>
+    <td><%= c.address %></td>
+    <td><%= c.phone %></td>
+  </tr>
+  
+  <% end %>
+</table>
+
+<hr>

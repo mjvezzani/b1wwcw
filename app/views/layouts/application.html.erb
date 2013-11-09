@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WardMissionApplication</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="navbar navbar-fixed-top">
+    <nav class="navbar-inner">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li><%= link_to "Home", root_path %></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Ward Mission <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Converts", converts_path %></li>
+              <li><%= link_to "Less Actives", less_actives_path %></li>
+              <li><%= link_to "Investigators", investigators_path %></li>
+              <hr>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Auxiliaries <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Relief Society" %></li>
+              <li><%= link_to "High Priest Group" %></li>
+              <li><%= link_to "Elders Quorum" %></li>
+              <li><%= link_to "YW/YM" %></li>
+              <li><%= link_to "Primary" %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main role="main">
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div class="span12">
+            <%= yield %>
+          </div>
+        </div>
+        <footer>
+          
+        </footer>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+</html>
+
+<!-- Things to add:
+patriarchal blessing to converts
+
+--!>
