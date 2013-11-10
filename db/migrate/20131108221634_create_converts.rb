@@ -8,7 +8,7 @@ class CreateConverts < ActiveRecord::Migration
       t.string :calling
       t.string :endowed
       t.string :ordained
-      t.string :comments
+      t.text :comments
 
       t.timestamps
     end
