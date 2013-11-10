@@ -1,0 +1,2 @@
+module HomeTeachingHelper
+end

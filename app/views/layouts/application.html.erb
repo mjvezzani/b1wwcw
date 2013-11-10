@@ -14,6 +14,16 @@
           <li><%= link_to "Home", root_path %></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Bishopric <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Thing 1" %></li>
+              <li><%= link_to "Thing 2" %></li>
+              <li><%= link_to "Thing 3" %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
               Ward Mission <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
@@ -29,32 +39,26 @@
               Auxiliaries <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Relief Society" %></li>
-              <li><%= link_to "High Priest Group" %></li>
-              <li><%= link_to "Elders Quorum" %></li>
-              <li><%= link_to "YW/YM" %></li>
-              <li><%= link_to "Primary" %></li>
+              <li><%= link_to "Relief Society", controller: "relief_society", action: "index" %></li>
+              <li><%= link_to "High Priest Group", controller: "high_priest_group", action: "index" %></li>
+              <li><%= link_to "Elders Quorum", controller: "elders_quorum", action: "index" %></li>
+              <li><%= link_to "YW/YM", controller: "ywym", action: "index" %></li>
+              <li><%= link_to "Primary", controller: "primary", action: "index" %></li>
             </ul>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main role="main">
-    <div class="container">
-      <div class="content">
-        <div class="row">
-          <div class="span12">
-            <%= yield %>
-          </div>
-        </div>
-        <footer>
-          
-        </footer>
-      </div>
-    </div>
-  </main>
-
+  <div class="container">
+    
+    <%= yield %>
+    <footer>
+      
+    </footer>
+      
+  </div>
+  
 
 </body>
 </html>

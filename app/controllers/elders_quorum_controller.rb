@@ -1,0 +1,2 @@
+class EldersQuorumController < ApplicationController
+end

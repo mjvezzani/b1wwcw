@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109015345) do
+ActiveRecord::Schema.define(version: 20131110204818) do
 
   create_table "converts", force: true do |t|
     t.string   "first_name"
@@ -22,6 +22,26 @@ ActiveRecord::Schema.define(version: 20131109015345) do
     t.string   "endowed"
     t.string   "ordained"
     t.string   "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "home_teachees", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.string   "address"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "home_teachings", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.string   "address"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,6 +64,26 @@ ActiveRecord::Schema.define(version: 20131109015345) do
     t.string   "calling"
     t.string   "ordained"
     t.string   "endowed"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sisters_in_needs", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "phone"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "visit_teachings", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "phone"
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
