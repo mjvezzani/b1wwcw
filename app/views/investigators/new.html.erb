@@ -4,31 +4,35 @@
 council can get an overview of priority investigators.</p>
 
 <%= form_for :investigator, url: investigators_path do |f| %>
-  <p>
+<div class="row">
+  <div class="span6">
+    <p>
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </p>
-  
-  <p>
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </p>
-  
-  <p>
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </p>
-  
-  <p>
+    </p>
+    <p>
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </p>
+    
+    <p>
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </p>
+    
+    <p>
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </p>
+  </div>
+  <div class="span6">
+    <p>
     <%= f.label :comments %><br>
-    <%= f.text_area :comments %>
-  </p>
-  
-  <p>
-    <%= f.submit %>
-  </p>
+    <%= f.text_area :comments, :class => "field span6", :rows => "10" %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  </div>
+</div>
 <% end %>
